@@ -46,40 +46,26 @@ extern "C" {
  * @brief  Specify the target platform
  * @note   Uncomment the line below according to the target platform
  */ 
-#define HD44780_PLATFORM_STM32_HAL
+// #define HD44780_PLATFORM_STM32_HAL
 // #define HD44780_PLATFORM_ESP32_IDF
 // #define HD44780_PLATFORM_AVR
 
 
 #if defined(HD44780_PLATFORM_STM32_HAL)
-// #define HD44780_RS_GPIO_PORT        GPIOA
-// #define HD44780_RS_GPIO_PIN         GPIO_PIN_0
-// #define HD44780_RW_GPIO_PORT        GPIOA
-// #define HD44780_RW_GPIO_PIN         GPIO_PIN_1
-// #define HD44780_E_GPIO_PORT         GPIOA
-// #define HD44780_E_GPIO_PIN          GPIO_PIN_2
-// #define HD44780_D4_GPIO_PORT        GPIOA
-// #define HD44780_D4_GPIO_PIN         GPIO_PIN_3
-// #define HD44780_D5_GPIO_PORT        GPIOA
-// #define HD44780_D5_GPIO_PIN         GPIO_PIN_4
-// #define HD44780_D6_GPIO_PORT        GPIOA
-// #define HD44780_D6_GPIO_PIN         GPIO_PIN_5
-// #define HD44780_D7_GPIO_PORT        GPIOA
-// #define HD44780_D7_GPIO_PIN         GPIO_PIN_6
-#define HD44780_RS_GPIO_PORT        LCD_RS_GPIO_Port
-#define HD44780_RS_GPIO_PIN         LCD_RS_Pin
-#define HD44780_RW_GPIO_PORT        LCD_RW_GPIO_Port
-#define HD44780_RW_GPIO_PIN         LCD_RW_Pin
-#define HD44780_E_GPIO_PORT         LCD_E_GPIO_Port
-#define HD44780_E_GPIO_PIN          LCD_E_Pin
-#define HD44780_D4_GPIO_PORT        LCD_D4_GPIO_Port
-#define HD44780_D4_GPIO_PIN         LCD_D4_Pin
-#define HD44780_D5_GPIO_PORT        LCD_D5_GPIO_Port
-#define HD44780_D5_GPIO_PIN         LCD_D5_Pin
-#define HD44780_D6_GPIO_PORT        LCD_D6_GPIO_Port
-#define HD44780_D6_GPIO_PIN         LCD_D6_Pin
-#define HD44780_D7_GPIO_PORT        LCD_D7_GPIO_Port
-#define HD44780_D7_GPIO_PIN         LCD_D7_Pin
+#define HD44780_RS_GPIO_PORT        GPIOA
+#define HD44780_RS_GPIO_PIN         GPIO_PIN_0
+#define HD44780_RW_GPIO_PORT        GPIOA
+#define HD44780_RW_GPIO_PIN         GPIO_PIN_1
+#define HD44780_E_GPIO_PORT         GPIOA
+#define HD44780_E_GPIO_PIN          GPIO_PIN_2
+#define HD44780_D4_GPIO_PORT        GPIOA
+#define HD44780_D4_GPIO_PIN         GPIO_PIN_3
+#define HD44780_D5_GPIO_PORT        GPIOA
+#define HD44780_D5_GPIO_PIN         GPIO_PIN_4
+#define HD44780_D6_GPIO_PORT        GPIOA
+#define HD44780_D6_GPIO_PIN         GPIO_PIN_5
+#define HD44780_D7_GPIO_PORT        GPIOA
+#define HD44780_D7_GPIO_PIN         GPIO_PIN_6
 #elif defined(HD44780_PLATFORM_ESP32_IDF)
 #define HD44780_RS_GPIO             GPIO_NUM_10
 #define HD44780_RW_GPIO             GPIO_NUM_11
