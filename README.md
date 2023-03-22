@@ -1,5 +1,6 @@
 # HD44780 Library
-Basic routines for interfacing a HD44780-based text LCD display
+Basic routines for interfacing a HD44780-based text LCD display.
+Note that this library only supports 4-bit mode at this time.
 
 
 ## Hardware Support
