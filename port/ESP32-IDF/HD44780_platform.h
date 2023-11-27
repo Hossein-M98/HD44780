@@ -42,31 +42,6 @@ extern "C" {
 
 
 /* Functionality Options --------------------------------------------------------*/
-/**
- * @brief  Specify the target platform
- * @note   Uncomment the line below according to the target platform
- */ 
-// #define HD44780_PLATFORM_STM32_HAL
-// #define HD44780_PLATFORM_ESP32_IDF
-// #define HD44780_PLATFORM_AVR
-
-
-#if defined(HD44780_PLATFORM_STM32_HAL)
-#define HD44780_RS_GPIO_PORT        GPIOA
-#define HD44780_RS_GPIO_PIN         GPIO_PIN_0
-#define HD44780_RW_GPIO_PORT        GPIOA
-#define HD44780_RW_GPIO_PIN         GPIO_PIN_1
-#define HD44780_E_GPIO_PORT         GPIOA
-#define HD44780_E_GPIO_PIN          GPIO_PIN_2
-#define HD44780_D4_GPIO_PORT        GPIOA
-#define HD44780_D4_GPIO_PIN         GPIO_PIN_3
-#define HD44780_D5_GPIO_PORT        GPIOA
-#define HD44780_D5_GPIO_PIN         GPIO_PIN_4
-#define HD44780_D6_GPIO_PORT        GPIOA
-#define HD44780_D6_GPIO_PIN         GPIO_PIN_5
-#define HD44780_D7_GPIO_PORT        GPIOA
-#define HD44780_D7_GPIO_PIN         GPIO_PIN_6
-#elif defined(HD44780_PLATFORM_ESP32_IDF)
 #define HD44780_RS_GPIO             GPIO_NUM_10
 #define HD44780_RW_GPIO             GPIO_NUM_11
 #define HD44780_E_GPIO              GPIO_NUM_12
@@ -74,33 +49,7 @@ extern "C" {
 #define HD44780_D5_GPIO             GPIO_NUM_14
 #define HD44780_D6_GPIO             GPIO_NUM_15
 #define HD44780_D7_GPIO             GPIO_NUM_16
-#elif defined(HD44780_PLATFORM_AVR)
-#define HD44780_RS_GPIO_PORT        PORTA
-#define HD44780_RS_GPIO_DDR         DDRA
-#define HD44780_RS_GPIO_BIT         0
-#define HD44780_RW_GPIO_PORT        PORTA
-#define HD44780_RW_GPIO_DDR         DDRA
-#define HD44780_RW_GPIO_BIT         1
-#define HD44780_E_GPIO_PORT         PORTA
-#define HD44780_E_GPIO_DDR          DDRA
-#define HD44780_E_GPIO_BIT          2
-#define HD44780_D4_GPIO_PORT        PORTA
-#define HD44780_D4_GPIO_PIN         PINA
-#define HD44780_D4_GPIO_DDR         DDRA
-#define HD44780_D4_GPIO_BIT         4
-#define HD44780_D5_GPIO_PORT        PORTA
-#define HD44780_D5_GPIO_PIN         PINA
-#define HD44780_D5_GPIO_DDR         DDRA
-#define HD44780_D5_GPIO_BIT         5
-#define HD44780_D6_GPIO_PORT        PORTA
-#define HD44780_D6_GPIO_PIN         PINA
-#define HD44780_D6_GPIO_DDR         DDRA
-#define HD44780_D6_GPIO_BIT         6
-#define HD44780_D7_GPIO_PORT        PORTA
-#define HD44780_D7_GPIO_PIN         PINA
-#define HD44780_D7_GPIO_DDR         DDRA
-#define HD44780_D7_GPIO_BIT         7
-#endif
+
 
 
 /**
@@ -109,6 +58,11 @@ extern "C" {
  ==================================================================================
  */
 
+/**
+ * @brief  Initialize platform device to communicate HD44780.
+ * @param  Handler: Pointer to handler
+ * @retval None
+ */
 void
 HD44780_Platform_Init(HD44780_Handler_t *Handler);
 
